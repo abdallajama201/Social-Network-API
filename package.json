@@ -1,0 +1,20 @@
+{
+  "name": "social-network-api",
+  "version": "1.0.0",
+  "description": "An API for running CRUD operations on a database.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/abdallajama201/Social-Network-API.git"
+  },
+  "author": "Abdalla Jama",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/abdallajama201/Social-Network-API/issues"
+  },
+  "homepage": "https://github.com/abdallajama201/Social-Network-API#readme"
+}
