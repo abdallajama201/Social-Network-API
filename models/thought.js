@@ -1,4 +1,4 @@
-const mongoose = require("mongoose");
+const mongoose = require('mongoose');
 
 const reactionSchema = new mongoose.Schema({
     reactionId: {type: mongoose.ObjectId, default: new mongoose.Types.ObjectId},
@@ -21,10 +21,10 @@ const thoughtSchema = new mongoose.Schema({
     }
 );
 
-thoughtSchema.virtual("reactionCount").get(function() {
+thoughtSchema.virtual('reactionCount').get(function() {
     return this.reactions.length;
 });
 
-const Thought = mongoose.model("Thought", thoughtSchema);
+const Thought = mongoose.model('Thought', thoughtSchema);
 
 module.exports = Thought;
