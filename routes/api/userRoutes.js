@@ -11,12 +11,8 @@ const {
 
 router
   .route('/')
-  .get( () => console.log("iii"))
-
-// router
-//   .route('/')
-//   .get(getUsers)
-//   .post(createUser);
+  .get(getUsers)
+  .post(createUser);
 
 router
   .route('/:userId')
