@@ -1,12 +1,13 @@
-const { ObjectId } = require('mongoose').Types;
 const { User, Thought } = require('../models');
 
 module.exports = {
+  // Get all thoughts
   getThoughts(req, res) {
     Thought.find()
       .then((thoughts) => res.json(thoughts))
       .catch((err) => res.status(500).json(err));
   },
+  // Create a new thought
   createThought(req, res) {
     Thought.create({ thoughtText: req.body.thoughtText, username: req.body.username })
       .then((thought) => {
@@ -18,6 +19,7 @@ module.exports = {
       })
       .catch((err) => res.status(500).json(err));
   },
+  // Get a single thought
   getSingleThought(req, res) {
     Thought.findOne({ _id: req.params.thoughtId })
       .then((thought) => {
@@ -29,6 +31,7 @@ module.exports = {
       })
       .catch((err) => res.status(500).json(err));
   },
+  // Update a single thought
   updateThought(req, res) {
     Thought.findOneAndUpdate(
       { _id: req.params.thoughtId },
@@ -45,6 +48,7 @@ module.exports = {
         res.status(500).json(err);
       });
   },
+  // Delete a single thought
   deleteThought(req, res) {
     Thought.findOneAndDelete({ _id: req.params.thoughtId })
       .then((thought) => {
@@ -58,6 +62,7 @@ module.exports = {
         res.status(500).json(err);
       });
   },
+  // Create a reaction and attach it to a thought
   createReaction(req, res) {
     Thought.findOneAndUpdate(
       { _id: req.params.thoughtId },
@@ -74,6 +79,7 @@ module.exports = {
         res.status(500).json(err);
       });
   },
+  // Delete a reaction
   deleteReaction(req, res) {
     Thought.findOneAndUpdate(
       { _id: req.params.thoughtId },
