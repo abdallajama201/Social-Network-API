@@ -19,7 +19,7 @@ The application requires Node.js. To install, run npm install on the command lin
 
 ## Usage
 
-To use the app a user needs to run ```node server.js``` from the command line, to start the server. At this point several API endpoints will be available to run CRUD operations on a MongoDB database. The endpoints include ```/api/users``` and ```/api/thoughts```. A walkthrough video is available at the following link
+To use the app a user needs to run ```node server.js``` from the command line, to start the server. At this point several API endpoints will be available to run CRUD operations on a MongoDB database. The endpoints include ```/api/users``` and ```/api/thoughts```. A walkthrough video is available at the following link [walkthrough](https://drive.google.com/file/d/1qDDPC1TwzJMviGnyyD9owymPVpF4vAkE/view).
 
 ## License
 

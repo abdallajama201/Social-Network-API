@@ -1,5 +1,6 @@
 const mongoose = require('mongoose');
 
+// Matches email field to an email regex
 const validator = (val) => {
     const emailRegex = /^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/;
     return emailRegex.test(val);
